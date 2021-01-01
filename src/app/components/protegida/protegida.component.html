@@ -1,0 +1,15 @@
+<p>protegida works!</p>
+
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-4 text-center">
+    <div class="card" style="width: 18rem" *ngIf="auth.user$ | async as user">
+      <img src="{{ user.picture }}" class="card-img-top" alt="picture" />
+      <div class="card-body">
+        <h5 class="card-title">{{ user.name }}</h5>
+        <p class="card-text">{{ user.email }}</p>
+        <span class="badge bg-danger">{{ user.nickname }}</span>
+      </div>
+    </div>
+  </div>
+</div>
